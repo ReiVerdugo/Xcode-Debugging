@@ -5,9 +5,10 @@
 ![Platform iOS](https://img.shields.io/badge/nanodegree-iOS-blue.svg)
 
 This repository contains resources for Udacity's iOS Debugging course.
+
 It was designed to learn how to use Xcode debugging tools. Original project contained a series of bugs withing the code, and it was the student's job to solve them.
+
 By now, it should have all bugs removed, and work properly
-@reiverdugo
 
 ## Overview
 
@@ -18,5 +19,8 @@ iOS Debugging covers the basics of print or "caveman" debugging, debugging with 
 The SoManyBugs should build and run without any additional setup; however, it is purposefully riddled with runtime bugs that should be solved as you complete the iOS Debugging course.
 
 ## Maintainers
-
+Original created by:
 @jarrodparkes
+
+Modifications to fix bugs done by:
+@reiverdugo
