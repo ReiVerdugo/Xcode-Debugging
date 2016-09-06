@@ -5,6 +5,9 @@
 ![Platform iOS](https://img.shields.io/badge/nanodegree-iOS-blue.svg)
 
 This repository contains resources for Udacity's iOS Debugging course.
+It was designed to learn how to use Xcode debugging tools. Original project contained a series of bugs withing the code, and it was the student's job to solve them.
+By now, it should have all bugs removed, and work properly
+@reiverdugo
 
 ## Overview
 
