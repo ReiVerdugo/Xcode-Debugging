@@ -15,7 +15,7 @@ class BreakpointBugViewController: UIViewController {
     // MARK: Properties
     
     let bugFactory = BugFactory.sharedInstance()
-    let maxBugs = 0
+    let maxBugs = 100
     let moveDuration = 3.0
     let disperseDuration = 1.0    
     var bugs = [UIImageView]()
@@ -34,6 +34,7 @@ class BreakpointBugViewController: UIViewController {
         if bugs.count < maxBugs {
             let newBug = bugFactory.createBug()
             bugs.append(newBug)
+            view.addSubview(newBug)
             moveBugsAnimation()
         }
     }
@@ -54,7 +55,6 @@ class BreakpointBugViewController: UIViewController {
                 bug.frame = CGRect(x: randomPosition.x - bug.frame.size.width/1.5, y: randomPosition.y - bug.frame.size.height/1.5, width: BugFactory.bugSize.width, height: BugFactory.bugSize.height)
             }
         }
-        addBugToView()
     }
     
     func disperseBugsAnimation() {
@@ -83,7 +83,6 @@ extension BreakpointBugViewController {
         if motion == .MotionShake { disperseBugsAnimation() }
     }
     func handleSingleTap(recognizer: UITapGestureRecognizer) {
-        addBugToView()
         addBugToView()
     }
 }

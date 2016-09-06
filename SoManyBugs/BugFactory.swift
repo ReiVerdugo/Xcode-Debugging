@@ -32,7 +32,6 @@ class BugFactory {
         let bug = UIImageView(frame: CGRect(x: -100, y: -100, width: 128, height: 128))
         bug.image = UIImage(named: "spider")
         bug.tintColor = BugFactory.bugTints[currentBugType.rawValue]
-        
         // add simple "shake" key-frame animation
         // for explanation, see http://www.objc.io/issue-12/animations-explained.html
         let shakeAnimation = CABasicAnimation(keyPath: "transform.rotation")

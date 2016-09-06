@@ -31,11 +31,14 @@ class PrintBugViewController: UIViewController {
     // MARK: Bug Functions
     
     func addBugToView() {
+        debugPrint(self)
         if bugs.count < maxBugs {
             let newBug = bugFactory.createBug()
             bugs.append(newBug)
+            view.addSubview(newBug)
             moveBugsAnimation()
         }
+        debugPrint(self)
     }
 
     func emptyBugsFromView() {
@@ -84,3 +87,18 @@ extension PrintBugViewController {
     func handleSingleTap(recognizer: UITapGestureRecognizer) { addBugToView() }
 }
 
+extension PrintBugViewController {
+    override var description : String {
+        return "PrintBugViewController contains \(bugs.count) bugs... \n"
+    }
+    
+    override var debugDescription : String {
+        var index = 0
+        var debugString = "PrintBugViewController contains \(bugs.count) bugs... \n"
+        for bug in bugs {
+            debugString += "Bug\(index) : \(bug.frame) \n"
+            index += 1
+        }
+        return debugString
+    }
+}
